@@ -3,7 +3,7 @@
 var allSections = document.getElementsByTagName('section'),  //  store all the section tags in an array
     windowHeight = window.innerHeight;  //  get the window height
 
-window.addEventListener('scroll', inViewport);  //  trigger the funtion on scroll
+window.addEventListener('scroll', inViewport);  //  run the funtion on scroll
 
 function inViewport(){
     for (var i = 0; i < allSections.length; i++) {  //  loop through the sections
