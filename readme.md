@@ -11,5 +11,4 @@ Loops through your page's section tags and adds the in ``` in-viewport ``` class
   \/\  ####  /\/
        `##'
 
-
 ```
