@@ -10,7 +10,7 @@ function inViewport(){
         var viewportOffset = allSections[i].getBoundingClientRect(),  //  returns the size of an element and its position relative to the viewport
             top = viewportOffset.top;  //  get the offset top
         if(top < windowHeight){  //  if the top offset is less than the window height
-            allSections[i].setAttribute('class', 'in-viewport');  //  add the class
+            allSections[i].classList.add('in-viewport');  //  add the class
         }
     }
 }
