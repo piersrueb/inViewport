@@ -6,7 +6,7 @@ Demo <a href="https://codepen.io/Rueb/pen/xjNMWL">here</a>.
 
 Initialise the function. The example below will add the ```in-viewport``` class to all ```<section>``` tags as they enter the viewport.
 
-```
+```js
 inViewport('section');
 ```
 
