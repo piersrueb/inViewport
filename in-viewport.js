@@ -19,5 +19,3 @@ function inViewport(elem){
     }
     elems();
 }
-
-inViewport('section');  //  run the function on all section elements
