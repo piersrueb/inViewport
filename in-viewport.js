@@ -13,7 +13,7 @@ function inViewport(elem){
             if(top < windowHeight){  //  if the top offset is less than the window height
                 allElements[i].classList.add('in-viewport');  //  add the class
             } else{
-                allElements[i].classList.remove('in-viewport');  //  add the class
+                allElements[i].classList.remove('in-viewport');  //  remove the class
             }
         }
     }
