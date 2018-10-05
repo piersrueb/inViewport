@@ -5,7 +5,6 @@
 const inViewport = (elem) => {
     let allElements = document.getElementsByTagName(elem);
     let windowHeight = window.innerHeight;
-    window.addEventListener('scroll', elems);
     const elems = () => {
         for (let i = 0; i < allElements.length; i++) {  //  loop through the sections
             let viewportOffset = allElements[i].getBoundingClientRect();  //  returns the size of an element and its position relative to the viewport
@@ -18,4 +17,5 @@ const inViewport = (elem) => {
         }
     }
     elems();
+    window.addEventListener('scroll', elems);
 }
