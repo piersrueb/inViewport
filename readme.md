@@ -4,10 +4,10 @@ Loops through your page's section tags and adds the in ``` in-viewport ``` class
 
 Demo <a href="https://codepen.io/Rueb/pen/xjNMWL">here</a>.
 
-Initialise the function. The example below will add the ```in-viewport``` class to all ```<section>``` tags as they enter the viewport.
+Initialise the function. The example below will add the ```in-viewport``` class to any element with the class ```trigger``` as they enter the viewport.
 
 ```js
-inViewport('section');
+inViewport("trigger", tol, "in-viewport");
 ```
 
 ```

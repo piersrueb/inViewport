@@ -2,20 +2,23 @@
 //  Author Piers Rueb
 //  https://github.com/piersrueb/inViewport
 
-const inViewport = (elem) => {
-    let allElements = document.getElementsByTagName(elem);
-    let windowHeight = window.innerHeight;
-    const elems = () => {
-        for (let i = 0; i < allElements.length; i++) {  //  loop through the sections
-            let viewportOffset = allElements[i].getBoundingClientRect();  //  returns the size of an element and its position relative to the viewport
-            let top = viewportOffset.top;  //  get the offset top
-            if(top < windowHeight){  //  if the top offset is less than the window height
-                allElements[i].classList.add('in-viewport');  //  add the class
-            } else{
-                allElements[i].classList.remove('in-viewport');  //  remove the class
+let wh = window.innerHeight;
+let tol = wh * 0.77; //  scroll tolerance - eg. 77% from page top
+
+const inViewport = (elem, pix, cls) => {
+    if (document.getElementsByClassName(elem).length > 0) {
+        let elems = document.getElementsByClassName(elem);
+        const check = () => {
+            for (let i = 0; i < elems.length; i++) {
+                let off = elems[i].getBoundingClientRect().top;
+                if (off <= pix) {
+                    elems[i].classList.add(cls);
+                } else {
+                    elems[i].classList.remove(cls);
+                }
             }
-        }
+            requestAnimationFrame(check);
+        };
+        requestAnimationFrame(check);
     }
-    elems();
-    window.addEventListener('scroll', elems);
-}
+};
